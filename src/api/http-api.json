@@ -3,13 +3,12 @@
     {
       "code": 0,
       "comment": "加群链接",
-      "url": "http%3a%2f%2fqm.qq.com%2fcgi-bin%2fqm%2fqr%3ffrom%3dapp%26p%3dandroid%26k%3dotEuesAkHjvn2sO6VlrhMS1AJpT4Ks_j"
+      "url": "http://qm.qq.com/cgi-bin/qm/qr?from=app&p=android&k=otEuesAkHjvn2sO6VlrhMS1AJpT4Ks_j"
     },
-
     {
       "code": 1,
       "comment": "首页html资源包",
-      "url": "https%3a%2f%2fraw.githubusercontent.com%2flwm-software%2flwm-xposed-mobileqq%2fv1.0%2fsrc%2fresource%2fzip%2findex_page.zip"
+      "url": "https://raw.githubusercontent.com/lwm-software/lwm-xposed-mobileqq/v1.0/src/resource/zip/index_page.zip"
     }
   ]
 }

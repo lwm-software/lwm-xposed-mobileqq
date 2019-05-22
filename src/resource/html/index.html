@@ -1,13 +1,34 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		  name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<title>Document</title>
+
+
+	<script>
+		window.onload = function() {
+
+			var btn2 = document.getElementById( 'joinQQGroup' );
+			btn2.addEventListener( 'click' , showMsg , false ); //鼠标单击的时候调用showMes这个函数
+			function showMsg() {
+				alert( "事件监听" );
+				native.invoke( userName );
+			}
+		}
+
+	</script>
+
 </head>
 <body>
-8888888888882342
+<div id="id1">这个页面可以动态修改的,暂时先这样,虽然不美观但也不影响功能使用</div>
+<div id="id2">这个页面可以动态修改的,暂时先这样,虽然不美观但也不影响功能使用</div>
+<br>
+<div>
+	<div>点击这里添加QQ交流群</div>
+	<button id="joinQQGroup">acasc</button>
+</div>
 </body>
 </html>

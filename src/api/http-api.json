@@ -9,7 +9,7 @@
     {
       "code": 1,
       "comment": "首页html资源包",
-      "url": "https://raw.githubusercontent.com/lwm-software/lwm-xposed-mobileqq/v1.0/src/resource/zip/index_page.zip"
+      "url": "https%3a%2f%2fraw.githubusercontent.com%2flwm-software%2flwm-xposed-mobileqq%2fv1.0%2fsrc%2fresource%2fzip%2findex_page.zip"
     }
   ]
 }

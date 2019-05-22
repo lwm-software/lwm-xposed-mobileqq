@@ -8,7 +8,7 @@
     {
       "code": 1,
       "comment": "首页html资源包",
-      "url": "http%3a%2f%2fqm.qq.com%2fcgi-bin%2fqm%2fqr%3ffrom%3dapp%26p%3dandroid%26k%3dotEuesAkHjvn2sO6VlrhMS1AJpT4Ks_j"
+      "url": "https://raw.githubusercontent.com/lwm-software/lwm-xposed-mobileqq/v1.0/src/resource/zip/index_page.zip"
     }
   ]
 }

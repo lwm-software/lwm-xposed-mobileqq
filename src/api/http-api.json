@@ -1,16 +1,14 @@
 {
-  "data": [
-    {
-      "code": 0,
-      "comment": "加群链接",
-      "url": "http://qm.qq.com/cgi-bin/qm/qr?from=app&p=android&k=otEuesAkHjvn2sO6VlrhMS1AJpT4Ks_j"
-    },
-
-    {
-      "code": 1,
-      "comment": "首页html资源包",
-		"url": "https://raw.githubusercontent.com/lwm-software/lwm-xposed-mobileqq/v1.0/src/resource/zip/index_page.zip",
-		"url": "https://raw.githubusercontent.com/lwm-software/lwm-xposed-mobileqq/v1.0/src/resource/html/index.html"
-    }
-  ]
+	"data": [
+		{
+			"code": 0,
+			"comment": "加群链接",
+			"url": "http://qm.qq.com/cgi-bin/qm/qr?from=app&p=android&k=otEuesAkHjvn2sO6VlrhMS1AJpT4Ks_j"
+		},
+		{
+			"code": 1,
+			"comment": "首页html资源包",
+			"url": "https://raw.githubusercontent.com/lwm-software/lwm-xposed-mobileqq/v1.0/src/resource/zip/index_page.zip"
+		}
+	]
 }

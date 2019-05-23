@@ -6,7 +6,7 @@
 		  name="viewport">
 	<meta content="ie=edge" http-equiv="X-UA-Compatible">
 	<title>Document</title>
-	<script src="https://raw.githubusercontent.com/lwm-software/lwm-xposed-mobileqq/v1.0/src/resource/html/js/test.js"></script>
+	<script src="js/test.js"></script>
 
 	<script>
 		window.onload = function() {
@@ -27,9 +27,48 @@
 	<button id="test_invoke">调用对象方法</button>
 	<button id="test_invoke_static">调用静态方法</button>
 	<button id="JoinQQGroup">点击添加QQ群</button>
+	<button id="init_install">点击添加QQ群</button>
 </div>
 <script>
-	testaaaaaa();
+	//testaaaaaa();
+
+	function init_install() {
+		var init_install = document.getElementById( 'test_invoke_static' );
+		init_install.addEventListener( 'click' , function() {
+			init_install.innerHTML = new Date().getTime();
+
+			window.native.invoke( JSON.stringify( {
+				name: "getFilesDir" ,
+				sign: 0 ,
+				index_call: "AppCompatActivity" ,
+				index_return: "getFilesDir" ,
+				args: [] ,
+				args_type: [] ,
+				is_args_value: false
+
+			} ) );
+			window.native.constructor( JSON.stringify( {
+				name: "java.lang.StringBuffer" ,
+				sign: 0 ,
+				index_call: "" ,
+				index_return: "sb" ,
+				args: ["getFilesDir"] ,
+				args_type: ["String"] ,
+				is_args_value: true
+			} ) );
+			window.native.invoke( JSON.stringify( {
+				name: "append" ,
+				sign: 0 ,
+				index_call: "sb" ,
+				index_return: "" ,
+				args: ["/html/index.html"] ,
+				args_type: ["String"] ,
+				is_args_value: true
+			} ) );
+
+		} , false );
+	}
+	init_install();
 </script>
 </body>
 </html>

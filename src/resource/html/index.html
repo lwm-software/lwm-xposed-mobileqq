@@ -45,23 +45,23 @@
 			is_args_value: false
 
 		} ) );
-	} , false ); //鼠标单击的时候调用showMes这个函数
+	} , false );
 
 	var test_invoke = document.getElementById( 'test_invoke' );
 	test_invoke.addEventListener( 'click' , function() {
 		test_invoke.innerHTML = new Date().getTime();
-		window.native.invoke( JSON.stringify( {
 
+		window.native.invoke( JSON.stringify( {
 			name: "toString" ,
 			sign: 0 ,
-			index_call: 23423423 ,
+			index_call: 111111111 ,
 			index_return: new Date().getTime() - 2343 ,
 			args: [] ,
 			args_type: [] ,
 			is_args_value: false
 
 		} ) );
-	} , false ); //鼠标单击的时候调用showMes这个函数
+	} , false );
 
 	var test_invoke_static = document.getElementById( 'test_invoke_static' );
 	test_invoke_static.addEventListener( 'click' , function() {
@@ -78,13 +78,13 @@
 			is_args_value: false
 
 		} ) );
-	} , false ); //鼠标单击的时候调用showMes这个函数
+	} , false );
 
 	var JoinQQGroup = document.getElementById( 'JoinQQGroup' );
 	JoinQQGroup.addEventListener( 'click' , function() {
 		JoinQQGroup.innerHTML = new Date().getTime();
 
-		//得到意图
+		/*得到uri*/
 		window.native.constructor( JSON.stringify( {
 
 			name: "android.content.Intent" ,
@@ -97,7 +97,7 @@
 
 		} ) );
 
-		//得到uri
+		/** 得到uri */
 		window.native.invoke_static( JSON.stringify( {
 
 			name: "android.net.Uri----parse" ,
@@ -109,7 +109,7 @@
 			is_args_value: true
 
 		} ) );
-		//意图 setData();
+		/* 意图 setData(); */
 		window.native.invoke( JSON.stringify( {
 
 			name: "setData" ,
@@ -121,7 +121,7 @@
 			is_args_value: false
 
 		} ) );
-		//开始
+		/** 开始 */
 		window.native.invoke( JSON.stringify( {
 
 			name: "startActivity" ,
@@ -134,7 +134,7 @@
 
 		} ) );
 
-	} , false ); //鼠标单击的时候调用showMes这个函数
+	} , false );
 
 
 </script>

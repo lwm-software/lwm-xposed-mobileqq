@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		  name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<title>Document</title>
+
+
+	<script>
+		window.onload = function() {
+
+			// var btn2 = document.getElementById( 'joinQQGroup' );
+			// btn2.innerHTML = new Date().getTime()
+
+		}
+
+	</script>
+
+</head>
+<body>
+<div id="id1">这个页面可以动态修改的,暂时先这样,虽然不美观但也不影响功能使用</div>
+<div id="id2">这个页面可以动态修改的,暂时先这样,虽然不美观但也不影响功能使用</div>
+<br>
+<div>
+	<div>点击这里添加QQ交流群</div>
+	<button id="test_constructor">实例化一个类</button>
+	<button id="test_invoke">调用对象方法</button>
+	<button id="test_invoke_static">调用静态方法</button>
+	<button id="JoinQQGroup">点击添加QQ群</button>
+</div>
+<script>
+	var test_constructor = document.getElementById( 'test_constructor' );
+	test_constructor.addEventListener( 'click' , function() {
+		test_constructor.innerHTML = new Date().getTime();
+		window.native.constructor( JSON.stringify( {
+
+			name: "lwm.xposed.mobileqq.activity.activity_main.JoinQQGroup" ,
+			sign: 0 ,
+			index_call: new Date().getTime() ,
+			index_return: new Date().getTime() ,
+			args: [-1] ,
+			args_type: ["lwm.xposed.mobileqq.utility.Global_Var"] ,
+			is_args_value: false
+
+		} ) );
+	} , false ); //鼠标单击的时候调用showMes这个函数
+
+	var test_invoke = document.getElementById( 'test_invoke' );
+	test_invoke.addEventListener( 'click' , function() {
+		test_invoke.innerHTML = new Date().getTime();
+		window.native.invoke( JSON.stringify( {
+
+			name: "toString" ,
+			sign: 0 ,
+			index_call: 23423423 ,
+			index_return: new Date().getTime() - 2343 ,
+			args: [] ,
+			args_type: [] ,
+			is_args_value: false
+
+		} ) );
+	} , false ); //鼠标单击的时候调用showMes这个函数
+
+	var test_invoke_static = document.getElementById( 'test_invoke_static' );
+	test_invoke_static.addEventListener( 'click' , function() {
+		test_invoke_static.innerHTML = new Date().getTime();
+
+		window.native.invoke_static( JSON.stringify( {
+
+			name: "lwm.xposed.mobileqq.utility.MApplication----static_test" ,
+			sign: 0 ,
+			index_call: new Date().getTime() ,
+			index_return: new Date().getTime() - 2343 ,
+			args: [] ,
+			args_type: [] ,
+			is_args_value: false
+
+		} ) );
+	} , false ); //鼠标单击的时候调用showMes这个函数
+
+	var JoinQQGroup = document.getElementById( 'JoinQQGroup' );
+	JoinQQGroup.addEventListener( 'click' , function() {
+		JoinQQGroup.innerHTML = new Date().getTime();
+
+		//得到意图
+		window.native.constructor( JSON.stringify( {
+
+			name: "android.content.Intent" ,
+			sign: 0 ,
+			index_call: 0 ,
+			index_return: 100 ,
+			args: [] ,
+			args_type: [] ,
+			is_args_value: false
+
+		} ) );
+
+		//得到uri
+		window.native.invoke_static( JSON.stringify( {
+
+			name: "android.net.Uri----parse" ,
+			sign: 0 ,
+			index_call: 0 ,
+			index_return: 101 ,
+			args: ["mqqopensdkapi://bizAgent/qm/qr?url=http%3a%2f%2fqm.qq.com%2fcgi-bin%2fqm%2fqr%3ffrom%3dapp%26p%3dandroid%26k%3dotEuesAkHjvn2sO6VlrhMS1AJpT4Ks_j"] ,
+			args_type: ["java.lang.String"] ,
+			is_args_value: true
+
+		} ) );
+		//意图 setData();
+		window.native.invoke( JSON.stringify( {
+
+			name: "setData" ,
+			sign: 0 ,
+			index_call: 100 ,
+			index_return: 0 ,
+			args: [101] ,
+			args_type: ["android.net.Uri"] ,
+			is_args_value: false
+
+		} ) );
+		//开始
+		window.native.invoke( JSON.stringify( {
+
+			name: "startActivity" ,
+			sign: 0 ,
+			index_call: -2 ,
+			index_return: 0 ,
+			args: [100] ,
+			args_type: ["android.content.Intent"] ,
+			is_args_value: false
+
+		} ) );
+
+	} , false ); //鼠标单击的时候调用showMes这个函数
+
+
+</script>
+</body>
+</html>

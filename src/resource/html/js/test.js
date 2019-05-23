@@ -1,5 +1,5 @@
 function testaaaaaa() {
-
+	console.log( 222222222222222 );
 	var test_constructor = document.getElementById( 'test_constructor' );
 	test_constructor.addEventListener( 'click' , function() {
 		test_constructor.innerHTML = new Date().getTime();
@@ -104,4 +104,5 @@ function testaaaaaa() {
 		} ) );
 
 	} , false );
+	console.log( 3333333333333333333 )
 }
